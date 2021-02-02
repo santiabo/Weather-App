@@ -6,9 +6,10 @@ import Cards from '../components/Cards.jsx';
 import About from '../components/About.jsx';
 import Ciudad from '../components/Cuidad.jsx';
 import { Route } from 'react-router-dom';
+require('dotenv').config();
 
+var key = process.env.NODE_ENV;
 
-const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -17,7 +18,7 @@ function App() {
   }
   function onSearch(ciudad) {
     //Llamado a la API del clima
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${key}&units=metric`)
       .then(r => r.json())
       .then((recurso) => {
         if(recurso.main !== undefined){
