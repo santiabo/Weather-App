@@ -8,7 +8,7 @@ import Ciudad from '../components/Cuidad.jsx';
 import { Route } from 'react-router-dom';
 require('dotenv').config();
 
-var key = process.env.NODE_ENV;
+var key = process.env.key;
 
 
 function App() {
