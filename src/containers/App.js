@@ -7,7 +7,7 @@ import About from '../components/About.jsx';
 import Ciudad from '../components/Cuidad.jsx';
 import { Route } from 'react-router-dom';
 require('dotenv').config();
-const  {API_KEY}  = process.env.API_KEY;
+//const  {API_KEY}  = process.env.API_KEY;
 
 function App() {
   const [cities, setCities] = useState([]);
